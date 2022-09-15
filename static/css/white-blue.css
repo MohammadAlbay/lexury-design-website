@@ -1,0 +1,65 @@
+:root {
+    --TOPBAR-HEIGHT: 3em;
+    --TOPBAR-TOTAL-DISTANCE: calc(0.6em + var(--TOPBAR-HEIGHT));
+}
+
+body {
+    overflow-y: hidden;
+}
+
+div.top, div.middle{
+    position: absolute; 
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em;
+    width: calc(100% - 1em - 1%);
+    left: 0.5%; 
+    background-color: rgb(243, 243, 243);
+    box-shadow: #c8c8c8 0px 0px 10px 2px;
+}
+
+/*  TOP SECTION */
+div.top { 
+    top: 0.3em; height: var(--TOPBAR-HEIGHT);
+    
+}
+
+div.top > .logo-section {
+    position: relative;
+    width: auto; 
+    background-color: green;
+}
+.logo-section > * {position: absolute;}
+.logo-section > img { 
+    top: 5px; top: 5px;
+    width: 50px; height: 50px;
+    
+}
+.logo-section > b {
+    left: 60px; width: 200px;
+}
+div.top.small {height: 3em;}
+div.top.medium {height: 10em;}
+div.top.large {height: 9em;}
+
+
+
+
+div.middle {
+    top: calc(var(--TOPBAR-TOTAL-DISTANCE) + 0.6em);
+    background-color: green;
+    height: calc(100% - var(--TOPBAR-TOTAL-DISTANCE) - 0.6em - 0.9em);
+    overflow-y: scroll!important;
+}
+
+
+div.middle::-webkit-scrollbar-track {
+    width: 5px;
+}
+div.middle::-webkit-scrollbar-thumb {
+    width: 5px;
+}
+
+
+
+
+

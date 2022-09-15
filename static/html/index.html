@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/white-blue.css">
+    <link rel="stylesheet" href="static/css/white-blue-mediaquery.css">
+    <script>
+        var container;
+        function onload() {
+            container  = document.getElementById('app');
+        }
+    </script>
+</head>
+<body onload="onload();">
+    <div class="top meduim">
+        <a href="/" data-link>Main</a>
+        <a href="/info" data-link>Info</a>
+        <a href="/account" data-link>Account</a>
+    </div>
+    <div class="middle">
+        <!-- The fragment container -->
+        <div id="app"></div>
+        <!-- The footer -->
+        <footer>
+            <a href="shit.com">Faceboo</a>
+        </footer>
+    </div>
+    <script type="module" src="static/js/index.js"></script>
+</body>
+</html>
