@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 app.use("/static", express.static(path.resolve(__dirname, "static")));
-
+//app.use("/res", express.static(path.resolve(__dirname, "static", "res")));
 app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "static", "html", "index.html"));
 });

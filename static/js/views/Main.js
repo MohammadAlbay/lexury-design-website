@@ -9,8 +9,23 @@ export default class extends AbstractView {
         this.viewPath = `static/html/${this.name}.html`;
         this.postDependencies = [
             {
-                path: "static/js/info.js",
-                attributes : {}
+                path: "/static/js/main.js"
+            },
+            {
+                path: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js",
+                attributes : {
+                    'integrity' : "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo",
+                    'crossorigin' : "anonymous"
+
+                }
+            },
+            {
+                path: "https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js",
+                attributes : {
+                    'integrity' : "sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/",
+                    'crossorigin' : "anonymous"
+
+                }
             }
         ];
     }

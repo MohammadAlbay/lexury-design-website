@@ -4,7 +4,7 @@ import Main from "./views/Main.js";
 
 // import PostView from "./views/PostView.js";
 // import Settings from "./views/Settings.js";
-var currentView = null;
+document.currentView = null;
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -50,11 +50,11 @@ const router = async () => {
     const view = new match.route.view(getParams(match));
     
 
-    if(currentView == null)
-        currentView = view;
-    else if(view != currentView) {
-        currentView.onUnload();
-        currentView = view;
+    if(document.currentView == null)
+    document.currentView = view;
+    else if(view != document.currentView) {
+        document.currentView.onUnload();
+        document.currentView = view;
     }
 
     await view.onLoad();

@@ -10,9 +10,8 @@ body {
 div.top, div.middle{
     position: absolute; 
     border-radius: 0.5em;
-    padding: 0.3em 0.5em;
-    width: calc(100% - 1em - 1%);
-    left: 0.5%; 
+    left: 1%; 
+    width: calc(100% - 2%);
     background-color: rgb(243, 243, 243);
     box-shadow: #c8c8c8 0px 0px 10px 2px;
 }
@@ -20,7 +19,7 @@ div.top, div.middle{
 /*  TOP SECTION */
 div.top { 
     top: 0.3em; height: var(--TOPBAR-HEIGHT);
-    
+    padding: 0.3em;
 }
 
 div.top > .logo-section {
@@ -45,21 +44,31 @@ div.top.large {height: 9em;}
 
 
 div.middle {
-    top: calc(var(--TOPBAR-TOTAL-DISTANCE) + 0.6em);
-    background-color: green;
+    top: calc(var(--TOPBAR-TOTAL-DISTANCE) + 0.1em);
     height: calc(100% - var(--TOPBAR-TOTAL-DISTANCE) - 0.6em - 0.9em);
     overflow-y: scroll!important;
+    padding: 0.3em 0em;
 }
 
 
-div.middle::-webkit-scrollbar-track {
-    width: 5px;
+div.middle::-webkit-scrollbar {
+    width: 7px; border-radius: 0em 0.5em 0.5em 0em;
 }
 div.middle::-webkit-scrollbar-thumb {
-    width: 5px;
+    background-color: aqua;
+    border-radius:0.5em;
 }
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+div.middle::-webkit-scrollbar-track {
+    background: #f1f1f1; border-radius: 0em 0.5em 0.5em 0em;
+  }
 
 
-
-
-
+footer {
+    width: 100%; height: auto;
+    background-color: rgb(58, 55, 55);
+    border-radius: 0.4em; padding: 1em;
+    box-sizing: border-box;
+}

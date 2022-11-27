@@ -67,12 +67,13 @@ export default class AbstractView {
             return;
         else {
             for(let i = tempDependencies.length-1; i > -1; i--) {
-                let script = document.createElement('SCRIPT');
+             let script = document.createElement('SCRIPT');
                 script.setAttribute('for-view', view.name);
                 script.src = tempDependencies[i].path;
                 let attributes = tempDependencies[i].attributes;
-                for(let attr in attributes) {
-                    script.setAttribute(attr, attributes[attr]);
+                if(attributes != undefined) {
+                    for(let attr in attributes) 
+                        script.setAttribute(attr, attributes[attr]);
                 }
                 
                 document.body.appendChild(script);
