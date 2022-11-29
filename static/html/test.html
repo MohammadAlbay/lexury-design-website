@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/gridlayout.css">
+    <style>
+        :root {
+            --card-width: 250px;
+            --card-border-radius: 16px;
+            --row-increament: 10px;
+            --card-small: 26;
+            --card-medium: 33;
+            --card-large: 45;
+            --card-margin: 15px 10px;
+        }
+
+        @media screen and (max-width:700px) {
+            :root {
+                --card-width: 350px;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            :root {
+                --card-width: 400px;
+            }
+        }
+        @media screen and (max-width:427px) {
+            :root {
+
+                --card-width: 42vw;
+                --card-margin: 5px 5px;
+
+                --card-small: 20;
+                --card-medium: 27;
+                --card-large: 35;
+            }
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: gray;
+        }
+
+        .pin_container {
+            margin: 0;
+            padding: 0;
+            width: 90vw;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, var(--card-width));
+            grid-auto-rows: var(--row-increament);
+        }
+
+        .card {
+            padding: 0px;
+            margin: var(--card-margin);
+            background-color: red;
+            border-radius: var(--card-border-radius);
+        }
+
+        .card_small {
+            grid-row-end: span var(--card-small);
+        }
+
+        .card_medium {
+            grid-row-end: span var(--card-medium);
+        }
+
+        .card_large {
+            grid-row-end: span var(--card-large);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pin_container">
+        <div class="card card_small">a</div>
+        <div class="card card_large">a</div>
+        <div class="card card_medium">a</div>
+        <div class="card card_small">a</div>
+        <div class="card card_large">a</div>
+        <div class="card card_medium">a</div>
+        <div class="card card_small">a</div>
+        
+        <div class="card card_medium">a</div>
+        <div class="card card_small">a</div>
+        <div class="card card_large">a</div>
+        <div class="card card_large">a</div>
+        <div class="card card_medium">a</div>
+    </div>
+</body>
+
+</html>
